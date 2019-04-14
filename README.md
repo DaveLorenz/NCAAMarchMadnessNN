@@ -24,7 +24,7 @@ Python 3.7 64-Bit (https://www.anaconda.com/download/)
 
 --Download input files from https://www.kaggle.com/c/mens-machine-learning-competition-2019/data: Stage2DataFiles.zip, MasseyOrdinals_thru_2019_day_128.zip
     
---Move following files above to 'Data/Kaggle NCAA': MasseyOrdinals_thru_2019_day_128.csv, NCAATourneyCompactResults.csv, NCAATourneySeeds.csv, RegularSeasonDetailedResults.csv, TeamSpellings.csv
+--Move following files above to 'Data/Kaggle NCAA': MasseyOrdinals_thru_2019_day_128.csv, NCAATourneyCompactResults, NCAATourneyCompactResults.csv, NCAATourneySeeds.csv, RegularSeasonDetailedResults.csv, TeamSpellings.csv
 
  --Run scripts 1-6 (i.e., 
         
