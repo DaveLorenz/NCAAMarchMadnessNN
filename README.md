@@ -22,16 +22,9 @@ If you run into any trouble with the setup/code or have any questions please con
 
 #How to reproduce competition results:
 
---Download input files from https://www.kaggle.com/c/mens-machine-learning-competition-2019/data: 
-    Stage2DataFiles.zip
-    MasseyOrdinals_thru_2019_day_128.zip
---Move following files above to 'Data/Kaggle NCAA':
-    From MasseyOrdinals_thru_2019_day_128.zip:
-        MasseyOrdinals_thru_2019_day_128.csv
-    From Stage2DataFiles.zip:
-        NCAATourneyCompactResults.csv
-        NCAATourneySeeds.csv
-        RegularSeasonDetailedResults.csv
-        TeamSpellings.csv
+--Download input files from https://www.kaggle.com/c/mens-machine-learning-competition-2019/data: Stage2DataFiles.zip, MasseyOrdinals_thru_2019_day_128.zip
+    
+--Move following files above to 'Data/Kaggle NCAA': MasseyOrdinals_thru_2019_day_128.csv, NCAATourneyCompactResults.csv, NCAATourneySeeds.csv, RegularSeasonDetailedResults.csv, TeamSpellings.csv
+
  --Run scripts 1-6 (i.e., 
         
