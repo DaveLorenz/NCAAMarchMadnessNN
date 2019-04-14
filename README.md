@@ -5,12 +5,12 @@ Below you can find a outline of how to reproduce my solution for the NCAA® ML C
 If you run into any trouble with the setup/code or have any questions please contact me at dave.a.lorenz@gmail.com
 
 #HARDWARE (this should have no problem running locally on an average laptop or deskop)
---Processor	Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, 2400 Mhz, 2 Core(s), 4 Logical Processor(s)
---8GB RAM
---Windows versoin 10
+Processor Intel(R) Core(TM) i5-6200U CPU @ 2.30GHz, 2400 Mhz, 2 Core(s), 4 Logical Processor(s)
+8GB RAM
+Windows versoin 10
 
 #SOFTWARE (python packages are detailed separately in `requirements.txt`):
---Python 3.7 64-Bit (https://www.anaconda.com/download/)
+Python 3.7 64-Bit (https://www.anaconda.com/download/)
 
 #DATA
 1. Point spreads from: http://www.thepredictiontracker.com/ncaaresults.php
