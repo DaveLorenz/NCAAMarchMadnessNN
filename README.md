@@ -18,7 +18,7 @@ Python 3.7 64-Bit (https://www.anaconda.com/download/)
 3. Kaggle data from: https://www.kaggle.com/c/mens-machine-learning-competition-2019/data
 
 #SCRIPTS
-1. 
+1. TEXT
 
 #How to reproduce competition results:
 
