@@ -24,9 +24,14 @@ My final model included the following 12 features for each team (i.e., 24 total 
 11. Binary indicator for whether team is in the ACC, B10, B12, or SEC
 12. Seed of team
 
-I also included a binary indicator for whether the game was a tournament game. I also collected Vegas line data and considered using line as a feature for the first round (similar to Matthews and Lopez approach in 2014 NCAA Kaggle win). Line is not available for predicting the tournament after the first round, because we don't yet know the matchups. Surprisingly, line did not improve model log loss. Therefore, I decided to exclude it. It is difficult to extract feature importance in a neural network. The figure below highlights that the efficiency metrics were very important in the boosted tree model.
+I also included a binary indicator for whether the game was a tournament game. I also collected Vegas line data and considered using line as a feature for the first round (similar to Matthews and Lopez approach in 2014 NCAA Kaggle win). Line is not available for predicting the tournament after the first round, because we don't yet know the matchups. Surprisingly, line did not improve model log loss. Therefore, I decided to exclude it. It is difficult to extract feature importance in a neural network. The figure below highlights that the efficiency margin (home and road) was very important in the boosted tree model.
+
+![Image of xgb](https://user-images.githubusercontent.com/49622342/56207337-77fe0e00-601c-11e9-8c53-2a619915f538.PNG)
+
+# Model
+As mentioned above, I trained a variety of models (boosted trees, random forest, neural network) and hyperparameters (learning rate, max depth of trees, number of hidden layers/nodes). The neural network with 3 hidden layers (7, 5, 3) depicted above performed the best (had the lowest log loss). More specifically, the neural network I tuned had a log loss of 0.42-0.45 in various test sets. The other two models were above 0.50 log loss. I did not consider ensembling the various models, because the neural network was far superior to the random forest and boosted trees (used xgboost).
+
+I trained my model using both tournament and regular season games and tested on two seperate holdout sets: (1) 2016 tournment only and (2) 2017/2018 tournments. A holdout set is some portion of historical data that you do not allow your model to “see.” This allows you to see how your model performs out of sample and evaluate where your model underfit or overfit. I trained a number of hyperparameters. Unsurprisingly, the relu activation function performed better in the test set than sigmoid activation function (i.e., logistic). I also tried a number of hidden layers and nodes within those layers until I was able to find the combination that led to the lowest test log loss.
 
 
-
-I trained my model using both tournament and regular season games and tested on two seperate holdout sets: (1) 2016 tournment only and (2) 2017/2018 tournments. A holdout set is some portion of historical data that you do not allow your model to “see.” This allows you to see how your model performs out of sample and evaluate where your model underfit or overfit.
 
