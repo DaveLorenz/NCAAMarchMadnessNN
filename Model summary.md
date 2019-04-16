@@ -1,5 +1,5 @@
 # TL;DR
-I used historical NCAA men's basketball data to train a neural network that predicted the outcomes of each game in the 2019 NCAA tournament. The model achieved a 0.42788 log loss and placed 4th in the Kaggle Google Cloud & NCAA® ML Competition 2019-Men's.
+I used historical NCAA men's basketball data to train a neural network that predicted the outcomes of each game in the 2019 NCAA tournament. The neural network achieved a 0.42788 log loss and placed 4th in the Kaggle Google Cloud & NCAA® ML Competition 2019-Men's.
 
 # About me
 I am master's candidate at the University of Virginia's Business Analytics program. An integral component of this part-time degree program is the application of machine learning to business problems. This was my first Kaggle competition, but our UVA cohort regularly has prediction challenges with a leaderboard for assignments. I also regularly wrangle data and build econometric models for my job as an Economic Consultant. I largely credit my success in the competition to my educational training at UVA, training on the job, and some hard work. I spent about 30 hours collection data and training/testing my model for the competition.
@@ -8,6 +8,25 @@ I am master's candidate at the University of Virginia's Business Analytics progr
 I collected and combined historical regular season data, tournament data, and metrics from leading basketball statisticians from 2004-2019. Ken Pom's offensive and defensive efficiency metrics were important features. I trained a variety of models (boosted trees, random forest, neural network) and hyperparameters (learning rate, max depth of trees, number of hidden layers/nodes). The neural network that performed the best is depicted below. I wrote my code in Python and used scikit-learn and xgboost to train, test, and evaluate models. Training the model on the 60K observations takes less than 15 minutes. 
 
 ![Image of NN](https://user-images.githubusercontent.com/49622342/56206156-b219e080-6019-11e9-9fbb-130a5ed24ce1.PNG)
+
+# Feature selection
+My final model included the following 12 features for each team (i.e., 24 total team specific features):
+1. Ken Pom end of season ranking
+2. Ken Pom efficiency margin
+3. Ken Pom offensive efficiency
+4. Ken Pom defensive efficiency
+5. Ken Pom "luck"
+6. Regular season wins against top 25 ranked teams
+7. Regular season average point margin
+8. Regular season field goal percentage
+9. Regular season 3-point field goal percentage
+10. Binary indicator for whether team played 20+ tournament games during 2004-2018
+11. Binary indicator for whether team is in the ACC, B10, B12, or SEC
+12. Seed of team
+
+I also included a binary indicator for whether the game was a tournament game. I also collected Vegas line data and considered using line as a feature for the first round (similar to Matthews and Lopez approach in 2014 NCAA Kaggle win). Line is not available for predicting the tournament after the first round, because we don't yet know the matchups. Surprisingly, line did not improve model log loss. Therefore, I decided to exclude it. It is difficult to extract feature importance in a neural network. The figure below highlights that the efficiency metrics were very important in the boosted tree model.
+
+
 
 I trained my model using both tournament and regular season games and tested on two seperate holdout sets: (1) 2016 tournment only and (2) 2017/2018 tournments. A holdout set is some portion of historical data that you do not allow your model to “see.” This allows you to see how your model performs out of sample and evaluate where your model underfit or overfit.
 
