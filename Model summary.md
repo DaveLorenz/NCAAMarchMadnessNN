@@ -7,7 +7,7 @@ I am master's candidate at the University of Virginia's Business Analytics progr
 # Summary
 I collected and combined historical regular season data, tournament data, and metrics from leading basketball statisticians from 2004-2019. Ken Pom's offensive and defensive efficiency metrics were important features. I trained a variety of models (boosted trees, random forest, neural network) and hyperparameters (learning rate, max depth of trees, number of hidden layers/nodes). The neural network that performed the best is depicted below. I wrote my code in Python and used scikit-learn and xgboost to train, test, and evaluate models. Training the model on the 60K observations takes less than 15 minutes. 
 
-![alt text](https://github.com/DaveLorenz/NCAAMarchMadnessNN/issues/1#issue-433729884)
+![Image of NN](https://user-images.githubusercontent.com/49622342/56206156-b219e080-6019-11e9-9fbb-130a5ed24ce1.PNG)
 
 I trained my model using both tournament and regular season games and tested on two seperate holdout sets: (1) 2016 tournment only and (2) 2017/2018 tournments. A holdout set is some portion of historical data that you do not allow your model to “see.” This allows you to see how your model performs out of sample and evaluate where your model underfit or overfit.
 
