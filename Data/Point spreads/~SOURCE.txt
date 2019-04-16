@@ -1,0 +1,2 @@
+http://www.thepredictiontracker.com/ncaaresults.php
+(e.g., http://www.thepredictiontracker.com/ncaabb18.csv)
