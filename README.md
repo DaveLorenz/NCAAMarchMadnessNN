@@ -17,8 +17,12 @@ Python 3.7 64-Bit (https://www.anaconda.com/download/)
 2. Ken Pom data from: https://kenpom.com/index.php (note: 2019 data collected prior to tournament)
 3. Kaggle data from: https://www.kaggle.com/c/mens-machine-learning-competition-2019/data
 
-#SCRIPTS
-1. TEXT
+#SCRIPTS (ran in Jupyter notebook but also posted .py and .html versions)
+1. 01 Prepare point spread data.ipynb
+2. 02 Prepare Ken Pom data.ipynb
+3. 03 Combine files for model training and testing.ipynb
+4. 04 Create data for 2019 prediction.ipynb
+5. 05 Model.ipynb
 
 #How to reproduce competition results:
 
@@ -26,5 +30,5 @@ Python 3.7 64-Bit (https://www.anaconda.com/download/)
     
 --Move following files above to 'Data/Kaggle NCAA': MasseyOrdinals_thru_2019_day_128.csv, NCAATourneyCompactResults, NCAATourneyCompactResults.csv, NCAATourneySeeds.csv, RegularSeasonDetailedResults.csv, TeamSpellings.csv
 
- --Run scripts 1-6 (i.e., 
+ --Run scripts 01-06 above
         
